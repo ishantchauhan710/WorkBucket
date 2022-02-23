@@ -46,6 +46,10 @@ body {
   padding: 2px 4px;
 }
 
+.btn-create-work:hover {
+  background-color: #6d0004;
+}
+
 .btn-create-work i {
   font-size: 1.6rem;
 }
