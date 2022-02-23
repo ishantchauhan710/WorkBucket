@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import WorkComponent from './components/WorkComponent';
 import WorkFormComponent from './components/WorkFormComponent';
 import { Work } from './models/Work';
 
@@ -22,6 +23,7 @@ const App: React.FC = () => {
         <div className='header'>Work Bucket</div>
         <WorkFormComponent work={work} setWork={setWork} createWork={createWork}/>
       </div>
+       <WorkComponent />
     </div>
   );
 }

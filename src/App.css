@@ -22,10 +22,6 @@ body {
   z-index: 1;
 }
 
-.work-form {
-}
-
-
 .input-work-title {
   width: 100%;
   outline: none;
@@ -53,3 +49,35 @@ body {
 .btn-create-work i {
   font-size: 1.6rem;
 }
+
+.work-item {
+  width: 20%;
+  background-color: #F1D302;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 5px;
+  color: #222222;
+}
+
+.work-title {
+  display: block;
+  flex: 1;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding-left: 10px;
+}
+
+.btn-work-action {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  outline: none;
+  width: 2rem;
+  color: #222222;
+}
+
+.btn-work-action:hover {
+  color: #444444;
+}
+
