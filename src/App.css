@@ -73,11 +73,13 @@ body {
   background-color: rgba(0,0,0,0);
   border: none;
   outline: none;
-  width: 2rem;
   color: #222222;
+  border: none;
+  border: 1px solid #F1D302;
+  border-radius: 3px;
 }
 
 .btn-work-action:hover {
-  color: #444444;
+  border: 1px solid #222222;
 }
 
