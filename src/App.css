@@ -76,8 +76,7 @@ body {
 
 .work-bucket-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
 }
 
 .bucket1-container {

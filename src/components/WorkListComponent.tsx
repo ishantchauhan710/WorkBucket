@@ -24,7 +24,7 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList,completedWorkL
             </div>
               {
                 workList?.map((work: Work, index) => (
-                  <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+                  <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setWorkList} completedWorkList={completedWorkList} setCompletedWorkList={setCompletedWorkList} />  
                 ))
                 
               }
@@ -44,7 +44,7 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList,completedWorkL
            </div>
              {
                completedWorkList?.map((work: Work,index) => (
-                 <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setCompletedWorkList} />  
+                 <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setCompletedWorkList} completedWorkList={completedWorkList} setCompletedWorkList={setCompletedWorkList} />  
                ))
              }
              {provided.placeholder}
