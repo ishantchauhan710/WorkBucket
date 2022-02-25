@@ -91,6 +91,15 @@ body {
   flex: 1;
 }
 
+.input-edit-work-bucket-title {
+  width: 95%;
+  outline: none;
+  padding: 5px;
+  border: 1px solid #444444;
+}
+
+
+
 .btn-edit-bucket1-title {
   border: 1px solid #235789;
   border-radius: 3px;
@@ -106,7 +115,7 @@ body {
 }
 
 
-.btn-edit-bucket-title:hover {
+.btn-edit-bucket1-title:hover, .btn-edit-bucket2-title:hover  {
   border: 1px solid #ffffff;
 }
 
@@ -141,6 +150,8 @@ body {
   padding: 5px;
   border: 1px solid #444444;
 }
+
+
 
 .btn-work-action {
   background-color: rgba(0,0,0,0);
