@@ -80,7 +80,11 @@ body {
   text-decoration: line-through;
 }
 
-.work-buttons {
+.input-edit-work {
+  flex: 1;
+  outline: none;
+  padding: 5px;
+  border: 1px solid #444444;
 }
 
 .btn-work-action {
@@ -91,6 +95,10 @@ body {
   border: none;
   border: 1px solid #F1D302;
   border-radius: 3px;
+}
+
+.btn-work-action-edit-mode {
+  display: none;
 }
 
 .btn-work-action:hover {

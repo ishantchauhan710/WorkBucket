@@ -9,12 +9,13 @@ const App: React.FC = () => {
   const [work,setWork] = useState<string>("");
   const [workList,setWorkList] = useState<Work[]>([]);
 
+
   const createWork = (e: React.FormEvent) => {
     e.preventDefault();
     if(work) {
       setWorkList([...workList,{workId: Date.now(), workTitle: work, workIsCompleted: false}]);
     }
-    //console.log(work);
+    setWork("");
   }
 
   return (
