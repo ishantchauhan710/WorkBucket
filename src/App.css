@@ -73,6 +73,11 @@ body {
   font-size: 1.1rem;
   flex: 1;
   padding-left: 10px;
+  text-decoration: none;
+}
+
+.pending {
+  text-decoration: line-through;
 }
 
 .work-buttons {
