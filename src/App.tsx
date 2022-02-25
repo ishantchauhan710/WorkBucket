@@ -14,7 +14,7 @@ const App: React.FC = () => {
     if(work) {
       setWorkList([...workList,{workId: Date.now(), workTitle: work, workIsCompleted: false}]);
     }
-    console.log(work);
+    //console.log(work);
   }
 
   return (

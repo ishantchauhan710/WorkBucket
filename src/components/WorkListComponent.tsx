@@ -7,16 +7,31 @@ interface Props {
     setWorkList: React.Dispatch<React.SetStateAction<Work[]>>;
 }
 
-const WorkListComponent = ({workList,setWorkList}: Props) => {
+const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
+
   return (
     <div className='work-list-container'>
         {
-            workList.map(work => {
-                <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />
-            })
+          workList?.map((work: Work) => (
+            <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+          ))
         }
-    </div>
+  </div>
   )
+
+  
+
+  // return (
+  //   <div className='work-list-container'>
+  //       {
+  //         workList.map((work: Work) => {
+  //           return <WorkComponent work={work} key={Date.now()} workList={workList} setWorkList={setWorkList} />  
+  //        })
+  //       }
+  // </div>
+  // )
+
+
 }
 
 export default WorkListComponent
