@@ -52,6 +52,10 @@ body {
 
 .work-list-container {
   width: 40%;
+  background-color: #235789;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .work-form-2 {
@@ -59,11 +63,38 @@ body {
   align-items: center;
 }
 
+.bucket-container {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin: 2px  0 7px 0;
+}
+
+.bucket-title {
+  font-size: 1rem;
+  flex: 1;
+}
+
+.btn-edit-bucket-title {
+  border: 1px solid #235789;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0);
+  color: #ffffff;
+}
+
+.btn-edit-bucket-title:hover {
+  border: 1px solid #ffffff;
+}
+
+.btn-edit-bucket-title i {
+  font-size: 1.3rem;
+}
+
  .work-item {
   width: 100%;
   border-radius: 5px;
-  margin: 20px;
   padding: 5px;
+  margin-top: 7px;
   background-color: #F1D302;
   color: #222222;
 }

@@ -11,6 +11,10 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
 
   return (
     <div className='work-list-container'>
+      <div className='bucket-container'>
+        <span className='bucket-title'>Bucket 1</span>
+        <button className='btn-edit-bucket-title'><i className='material-icons'>edit</i></button>
+      </div>
         {
           workList?.map((work: Work) => (
             <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
@@ -18,19 +22,6 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
         }
   </div>
   )
-
-  
-
-  // return (
-  //   <div className='work-list-container'>
-  //       {
-  //         workList.map((work: Work) => {
-  //           return <WorkComponent work={work} key={Date.now()} workList={workList} setWorkList={setWorkList} />  
-  //        })
-  //       }
-  // </div>
-  // )
-
 
 }
 
