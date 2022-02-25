@@ -10,7 +10,7 @@ interface Props {
     setCompletedWorkList: React.Dispatch<React.SetStateAction<Work[]>>;
 }
 
-const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
+const WorkListComponent: React.FC<Props> = ({workList,setWorkList,completedWorkList,setCompletedWorkList}) => {
 
   return (
     <div className='work-bucket-container'>
@@ -23,10 +23,13 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
               <button className='btn-edit-bucket1-title'><i className='material-icons'>edit</i></button>
             </div>
               {
-                workList?.map((work: Work) => (
-                  <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+                completedWorkList?.map((work: Work, index) => (
+                  <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setCompletedWorkList} />  
                 ))
+                
               }
+
+             {provided.placeholder}
          </div>
       )
       }     
@@ -40,10 +43,11 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
              <button className='btn-edit-bucket2-title'><i className='material-icons'>edit</i></button>
            </div>
              {
-               workList?.map((work: Work) => (
-                 <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+               workList?.map((work: Work,index) => (
+                 <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
                ))
              }
+             {provided.placeholder}
          </div>
       )
       }     
