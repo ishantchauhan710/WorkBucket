@@ -17,7 +17,9 @@ const WorkComponent = ({work,workList,setWorkList}: Props) => {
           );
     }
 
-    const deleteWork = (workId: number) => { }
+    const deleteWork = (workId: number) => {
+        setWorkList(workList.filter((workItem)=>workItem.workId!==workId));
+     }
 
     const editWork = (workId: number) => { }
 
