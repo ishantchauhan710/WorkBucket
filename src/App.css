@@ -27,17 +27,18 @@ body {
   outline: none;
   padding: 5px 3.7rem 5px 5px;
   font-size: 1.3rem;
+  padding: 0.6rem;
   position: relative;
 }
 
 .btn-create-work {
-  background-color: #ED1C24;
+  background-color: #ec0008;
   color: #ffffff;
   position: absolute;
   right: 0;
   border-radius: 25px;
   border: none;
-  margin-top: 0.1rem;
+  margin-top: 0.4rem;
   margin-right: 10px;
   padding: 2px 4px;
 }
@@ -50,37 +51,61 @@ body {
   font-size: 1.6rem;
 }
 
-.work-list-container {
-  width: 40%;
+.work-list-container1 {
+  width: 100%;
   background-color: #235789;
   margin: 20px;
   border-radius: 5px;
   padding: 10px;
 }
 
+.work-list-container2 {
+  width: 100%;
+  background-color: #ec0008;
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+
+
 .work-form-2 {
   display: flex;
   align-items: center;
 }
 
-.bucket-container {
+.work-bucket-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bucket1-container {
   color: #ffffff;
   display: flex;
   align-items: center;
   margin: 2px  0 7px 0;
 }
 
-.bucket-title {
+.bucket1-title {
   font-size: 1rem;
   flex: 1;
 }
 
-.btn-edit-bucket-title {
+.btn-edit-bucket1-title {
   border: 1px solid #235789;
   border-radius: 3px;
   background-color: rgba(0,0,0,0);
   color: #ffffff;
 }
+
+.btn-edit-bucket2-title {
+  border: 1px solid #ec0008;
+  border-radius: 3px;
+  background-color: rgba(0,0,0,0);
+  color: #ffffff;
+}
+
 
 .btn-edit-bucket-title:hover {
   border: 1px solid #ffffff;

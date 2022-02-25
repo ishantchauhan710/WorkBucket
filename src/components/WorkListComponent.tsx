@@ -10,17 +10,37 @@ interface Props {
 const WorkListComponent: React.FC<Props> = ({workList,setWorkList}) => {
 
   return (
-    <div className='work-list-container'>
-      <div className='bucket-container'>
-        <span className='bucket-title'>Bucket 1</span>
-        <button className='btn-edit-bucket-title'><i className='material-icons'>edit</i></button>
+    <div className='work-bucket-container'>
+
+      <div className='work-list-container1'>
+        <div className='bucket1-container'>
+          <span className='bucket1-title'>Bucket 1</span>
+          <button className='btn-edit-bucket1-title'><i className='material-icons'>edit</i></button>
+        </div>
+          {
+            workList?.map((work: Work) => (
+              <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+            ))
+          }
       </div>
-        {
-          workList?.map((work: Work) => (
-            <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
-          ))
-        }
-  </div>
+
+      
+      <div className='work-list-container2'>
+        <div className='bucket1-container'>
+          <span className='bucket1-title'>Bucket 2</span>
+          <button className='btn-edit-bucket2-title'><i className='material-icons'>edit</i></button>
+        </div>
+          {
+            workList?.map((work: Work) => (
+              <WorkComponent work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+            ))
+          }
+      </div>
+
+      
+
+
+    </div>
   )
 
 }
