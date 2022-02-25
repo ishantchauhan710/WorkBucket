@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { DragDropContext } from 'react-beautiful-dnd';
 import './App.css';
 import WorkFormComponent from './components/WorkFormComponent';
 import WorkListComponent from './components/WorkListComponent';
@@ -8,6 +9,8 @@ const App: React.FC = () => {
 
   const [work,setWork] = useState<string>("");
   const [workList,setWorkList] = useState<Work[]>([]);
+
+  const [completedWorkList,setCompletedWorkList] = useState<Work[]>([]);
 
 
   const createWork = (e: React.FormEvent) => {
@@ -19,13 +22,15 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="App">
-      <div className="header-container">
-        <div className='header'>Work Bucket</div>
-        <WorkFormComponent work={work} setWork={setWork} createWork={createWork}/>
+    <DragDropContext onDragEnd={()=>{}}>
+      <div className="App">
+        <div className="header-container">
+          <div className='header'>Work Bucket</div>
+          <WorkFormComponent work={work} setWork={setWork} createWork={createWork}/>
+        </div>
+        <WorkListComponent workList={workList} setWorkList={setWorkList} completedWorkList={completedWorkList} setCompletedWorkList={setCompletedWorkList} />
       </div>
-       <WorkListComponent workList={workList} setWorkList={setWorkList} />
-    </div>
+    </DragDropContext>
   );
 }
 
