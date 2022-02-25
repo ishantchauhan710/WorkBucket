@@ -16,15 +16,15 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList,completedWorkL
     <div className='work-bucket-container'>
 
      <Droppable droppableId='bucket1'>
-      { (provided) => (
-           <div ref={provided.innerRef} className='work-list-container1' {...provided.droppableProps}>
+      { (provided,snapshot) => (
+           <div ref={provided.innerRef} className={`work-list-container1 ${snapshot.isDraggingOver?'dragActive':''}`} {...provided.droppableProps}>
             <div className='bucket1-container'>
               <span className='bucket1-title'>Bucket 1</span>
               <button className='btn-edit-bucket1-title'><i className='material-icons'>edit</i></button>
             </div>
               {
-                completedWorkList?.map((work: Work, index) => (
-                  <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setCompletedWorkList} />  
+                workList?.map((work: Work, index) => (
+                  <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
                 ))
                 
               }
@@ -36,15 +36,15 @@ const WorkListComponent: React.FC<Props> = ({workList,setWorkList,completedWorkL
      </Droppable>
 
      <Droppable droppableId='bucket2'>
-      { (provided) => (
-           <div ref={provided.innerRef} className='work-list-container2' {...provided.droppableProps}>
+      { (provided,snapshot) => (
+           <div ref={provided.innerRef}  className={`work-list-container2 ${snapshot.isDraggingOver?'dragActive':''}`} {...provided.droppableProps}>
            <div className='bucket1-container'>
              <span className='bucket1-title'>Bucket 2</span>
              <button className='btn-edit-bucket2-title'><i className='material-icons'>edit</i></button>
            </div>
              {
-               workList?.map((work: Work,index) => (
-                 <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setWorkList} />  
+               completedWorkList?.map((work: Work,index) => (
+                 <WorkComponent index={index} work={work} key={work.workId} workList={workList} setWorkList={setCompletedWorkList} />  
                ))
              }
              {provided.placeholder}
