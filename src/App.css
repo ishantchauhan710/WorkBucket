@@ -79,14 +79,14 @@ body {
   align-items: flex-start;
 }
 
-.bucket1-container {
+.bucket1-container, .bucket2-container {
   color: #ffffff;
   display: flex;
   align-items: center;
   margin: 2px  0 7px 0;
 }
 
-.bucket1-title {
+.bucket1-title, .bucket2-title {
   font-size: 1rem;
   flex: 1;
 }
