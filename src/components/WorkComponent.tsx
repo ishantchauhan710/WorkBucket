@@ -23,17 +23,30 @@ const WorkComponent = ({work,workList,setWorkList,index,completedWorkList,setCom
             editWork(e,workElt.workId)
         } else {
             if(work.workIsCompleted) {
-                setWorkList(
-                    workList.map((workItem) =>
-                      workItem.workId === workElt.workId ? { ...work, workIsCompleted: false } : work
-                    )
-                  );
+
+
+                workElt.workIsCompleted = false
+
+                let workCompletedList = completedWorkList
+                let workInCompletedList = workList
+
+                let workCompletedListUpdated = workCompletedList.filter((workElement) => workElement.workId!==workElt.workId)
+                workInCompletedList.push(workElt)
+
+                setCompletedWorkList(workCompletedListUpdated)
+
+                  
             } else {
-                setCompletedWorkList(
-                    completedWorkList.map((workItem) =>
-                      workItem.workId === workElt.workId ? { ...work, workIsCompleted: true } : work
-                    )
-                  );
+
+                workElt.workIsCompleted = true
+
+                let workCompletedList = completedWorkList
+                let workInCompletedList = workList
+
+                let workIncompletedListUpdated = workInCompletedList.filter((workElement) => workElement.workId!==workElt.workId)
+                workCompletedList.push(workElt)
+
+                setWorkList(workIncompletedListUpdated)
             }
         }
     }
